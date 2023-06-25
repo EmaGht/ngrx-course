@@ -17,4 +17,7 @@ export class AuthService {
         return this.http.post<User>('/api/login', {email,password});
     }
 
+    logout(): Observable<boolean> {
+        return this.http.post<boolean>('/api/logout', null);
+    }
 }
